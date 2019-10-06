@@ -13,6 +13,13 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.16.20'
+    testCompileOnly 'org.projectlombok:lombok:1.16.20'
 }
 
 tasks.withType(JavaCompile) {
