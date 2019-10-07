@@ -22,6 +22,10 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.16.20'
 }
 
+// set character
 tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
+    options.encoding = 'UTF-8'
+}
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
 }

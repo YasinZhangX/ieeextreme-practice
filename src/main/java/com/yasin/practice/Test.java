@@ -1,5 +1,7 @@
 package com.yasin.practice;
 
+import com.yasin.utils.importers.FileImporter;
+import com.yasin.utils.importers.Importer;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -7,21 +9,11 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Test {
+    private static Importer importer = new FileImporter();
 
     public static void main(String[] args) {
-        for (int i = 0; i < 50; i++) {
-            long startTime = System.currentTimeMillis();
-
-            for (int j = 0; j < 100; j++) {
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-
-            log.info(i + ": time is " + (System.currentTimeMillis() - startTime));
-        }
+        Solution1 s = new Solution1();
+        s.assembleParams(importer.importFromSource("InputFiles/solution1.txt"));
+        log.info("绳子长" + s.getThreadLength());
     }
 }
