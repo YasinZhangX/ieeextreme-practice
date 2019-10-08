@@ -1,5 +1,7 @@
 package com.yasin.practice;
 
+import com.yasin.utils.importers.FileImporter;
+import com.yasin.utils.importers.Importer;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -89,6 +91,15 @@ public class Solution1 {
         double radians = Math.toRadians(degrees / 2);
         double sinRatio = Math.sin(radians);
         return ((radius * sinRatio) * 2);
+    }
+
+    public static void main(String[] args) {
+        Importer importer = new FileImporter();
+        long startTime = System.currentTimeMillis();
+        Solution1 s = new Solution1();
+        s.assembleParams(importer.importFromSource("InputFiles/solution1.txt"));
+        log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
+        log.info("绳子长" + s.getThreadLength());
     }
 
 }
