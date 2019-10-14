@@ -4,6 +4,6 @@ package com.yasin.practice;
  * Barrett Reduction
  * @author Yasin Zhang
  */
-public class Soulution2 {
+public class Solution2 {
     // C version
 }

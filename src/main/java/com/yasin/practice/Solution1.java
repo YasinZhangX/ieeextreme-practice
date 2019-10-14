@@ -98,8 +98,8 @@ public class Solution1 {
         long startTime = System.currentTimeMillis();
         Solution1 s = new Solution1();
         s.assembleParams(importer.importFromSource("InputFiles/solution1.txt"));
-        log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
         log.info("绳子长" + s.getThreadLength());
+        log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
     }
 
 }
