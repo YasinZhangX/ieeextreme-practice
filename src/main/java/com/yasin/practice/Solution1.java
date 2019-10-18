@@ -94,10 +94,10 @@ public class Solution1 {
     }
 
     public static void main(String[] args) {
-        Importer importer = new FileImporter();
+        Importer importer = new FileImporter("InputFiles/solution1.txt");
         long startTime = System.currentTimeMillis();
         Solution1 s = new Solution1();
-        s.assembleParams(importer.importByName("InputFiles/solution1.txt"));
+        s.assembleParams(importer.getTotalData());
         log.info("绳子长" + s.getThreadLength());
         log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
     }

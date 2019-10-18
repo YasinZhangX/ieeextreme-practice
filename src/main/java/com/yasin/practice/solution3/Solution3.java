@@ -34,10 +34,10 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        Importer importer = new FileImporter();
+        Importer importer = new FileImporter("InputFiles/solution3.txt");
         long startTime = System.currentTimeMillis();
         Solution3 s = new Solution3();
-        s.assembleParams(importer.importByName("InputFiles/solution3.txt"));
+        s.assembleParams(importer.getTotalData());
         log.info("结果为" + s.getRateList());
         log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
     }
