@@ -37,7 +37,7 @@ public class Solution3 {
         Importer importer = new FileImporter();
         long startTime = System.currentTimeMillis();
         Solution3 s = new Solution3();
-        s.assembleParams(importer.importFromSource("InputFiles/solution3.txt"));
+        s.assembleParams(importer.importByName("InputFiles/solution3.txt"));
         log.info("结果为" + s.getRateList());
         log.info("运行时间为" + (System.currentTimeMillis() - startTime) + "ms");
     }
